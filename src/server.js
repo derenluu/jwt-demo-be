@@ -31,13 +31,13 @@ const START_SERVER = () => {
   app.use('/v1', APIs_V1);
 
   //~ Because it is demo, it should be placed in the controller. If in a real project, it should be placed in the environment variable in the .env file
-  const LOCAL_DEV_APP_PORT = 8017;
-  const LOCAL_DEV_APP_HOST = 'localhost';
-  const AUTHOR = 'Deren';
+  const port = 8017;
+  const host = 'localhost';
+  const author = 'Deren';
 
-  app.listen(LOCAL_DEV_APP_PORT, LOCAL_DEV_APP_HOST, () => {
+  app.listen(port, host, () => {
     console.log(
-      `Local DEV: Hello ${AUTHOR}, Back-end Server is running successfully at Host: ${LOCAL_DEV_APP_HOST} and Port: ${LOCAL_DEV_APP_PORT}`
+      `Local DEV: Hello ${author}, Back-end Server is running successfully at Host: ${host} and Port: ${port}`
     );
   });
 };
